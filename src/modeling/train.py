@@ -1,7 +1,13 @@
 from sklearn.ensemble import RandomForestClassifier
+import joblib
 
-taxi_train = taxi_train.head(100000)
+def train_model(df, features, target_col):
+    df_train = df.head(100000)
+    rfc = RandomForestClassifier(n_estimators=100, max_depth=10)
+    rfc.fit(df_train[features], df_train[target_col])
+    joblib.dump(rfc, "random_forest.joblib")
+    return
 
-rfc = RandomForestClassifier(n_estimators=100, max_depth=10)
 
-rfc.fit(taxi_train[features], taxi_train[target_col])
+
+
