@@ -1,6 +1,9 @@
 import pandas as pd
 
-import pandas as pd
+def read_dataframe(url):
+    df=pd.read_parquet(url)
+    return df
+
 
 def preprocess(df, target_col):
 
@@ -33,8 +36,4 @@ def preprocess(df, target_col):
 
     return df.reset_index(drop=True)
 
-taxi = pd.read_parquet('https://d37ci6vzurychx.cloudfront.net/trip-data/yellow_tripdata_2020-01.parquet')
 
-target_col = "high_tip"
-
-taxi_train = preprocess(df=taxi, target_col=target_col)
