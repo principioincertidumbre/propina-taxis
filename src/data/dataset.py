@@ -1,8 +1,10 @@
 import pandas as pd
 
+import pandas as pd
+
 def preprocess(df, target_col):
 
-# Basic cleaning
+    # Basic cleaning
     df = df[df['fare_amount'] > 0].reset_index(drop=True)  # avoid divide-by-zero
     # add target
     df['tip_fraction'] = df['tip_amount'] / df['fare_amount']
@@ -18,7 +20,12 @@ def preprocess(df, target_col):
     df['trip_speed'] = df['trip_distance'] / (df['trip_time'] + EPS)
 
     # drop unused columns
-    df = df[['tpep_dropoff_datetime'] + features + [target_col]]
+    numeric_feat = ["pickup_weekday","pickup_hour",'work_hours',"pickup_minute","passenger_count",'trip_distance','trip_time',
+    'trip_speed']
+    categorical_feat = ["PULocationID","DOLocationID","RatecodeID"]
+    features = numeric_feat + categorical_feat
+    cols_to_keep = ['tpep_dropoff_datetime'] + features + [target_col]
+    df = df[cols_to_keep]
     df[features + [target_col]] = df[features + [target_col]].astype("float32").fillna(-1.0)
 
     # convert target to int32 for efficiency (it's just 0s and 1s)
