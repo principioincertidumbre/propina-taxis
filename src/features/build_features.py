@@ -1,4 +1,5 @@
-numeric_feat = [
+def build_features(df):
+    numeric_feat = [
     "pickup_weekday",
     "pickup_hour",
     'work_hours',
@@ -7,11 +8,11 @@ numeric_feat = [
     'trip_distance',
     'trip_time',
     'trip_speed'
-]
-categorical_feat = [
-    "PULocationID",
-    "DOLocationID",
-    "RatecodeID",
-]
-features = numeric_feat + categorical_feat
-EPS = 1e-7
+     ]
+     categorical_feat = [
+     "PULocationID",
+     "DOLocationID",
+     "RatecodeID",
+     ]
+     features = numeric_feat + categorical_feat
+     return features
