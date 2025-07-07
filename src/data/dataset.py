@@ -9,6 +9,7 @@ def preprocess(df, target_col):
     df[target_col] = df['tip_fraction'] > 0.2
 
     # add features
+    EPS = 1e-7
     df['pickup_weekday'] = df['tpep_pickup_datetime'].dt.weekday
     df['pickup_hour'] = df['tpep_pickup_datetime'].dt.hour
     df['pickup_minute'] = df['tpep_pickup_datetime'].dt.minute
