@@ -1,4 +1,4 @@
-def build_features(df):
+def build_features():
     numeric_feat = [
     "pickup_weekday",
     "pickup_hour",
