@@ -24,3 +24,5 @@ df[features + [target_col]] = df[features + [target_col]].astype("float32").fill
 df[target_col] = df[target_col].astype("int32")
 
 return df.reset_index(drop=True)
+
+taxi = pd.read_parquet('https://d37ci6vzurychx.cloudfront.net/trip-data/yellow_tripdata_2020-01.parquet')
