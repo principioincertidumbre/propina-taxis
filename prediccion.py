@@ -10,4 +10,8 @@ target_col = "high_tip"
 
 taxi_test = dataset.preprocess(df=taxi_feb, target_col=target_col)
 
-predict.model_predict(taxi_test, features, target_col)
+y_pred = predict.model_predict(taxi_test, features)
+
+f1 = predict.model_evaluate(taxi_test,target_col, y_pred)
+
+print(f'F1: {f1_score}')
