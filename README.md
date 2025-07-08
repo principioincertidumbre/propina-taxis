@@ -26,7 +26,7 @@ Proyecto para la asignatura Desarrollo de Proyectos y Productos de Datos Magíst
 │   ├── predicción.py<br>                                                                     
 │   │  
 ├── src/                <- Código fuente del proyecto definido como módulos.<br>
-│   ├── __init__.py 
+│   ├── __init__.py <br>
 |   ├── config.py      <- Parámetros y rutas de configuración.<br>
 │   │
 │   ├── data/<br>                                                                       
