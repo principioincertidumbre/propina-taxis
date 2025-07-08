@@ -34,5 +34,9 @@ venv\Scripts\activate.bat
 ```
 pip install -r requirements.txt
 ```
+
+## Uso
+1. Active el entorno virtual del proyecto
+
 ## Licencia
 Este proyecto está bajo la licencia MIT. Consulte el archivo [LICENSE](https://github.com/principioincertidumbre/propina-taxis/blob/main/LICENSE) para obtener más información.
