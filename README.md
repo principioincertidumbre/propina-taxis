@@ -38,8 +38,8 @@ pip install -r requirements.txt
 
 ## Uso
 1. Active el entorno virtual del proyecto
-2. Ejecute el script entrenamiento.py para entrenar el modelo Random Forest utilizando los datos de propinas de enero 2020
-3. Ejecute el script evaluacion_mensual.py para evaluar el modelo obtenido para los meses de enero a junio 2020 para obtener los valores F1-score y la cantidad de ejemplos considerados para cada mes de dicho año
+2. Ejecute el script entrenamiento.py para entrenar el modelo Random Forest utilizando los datos de enero 2020
+3. Ejecute el script evaluacion_mensual.py para evaluar el modelo obtenido entre enero a junio 2020 
 
 ## Licencia
 Este proyecto está bajo la licencia MIT. Consulte el archivo [LICENSE](https://github.com/principioincertidumbre/propina-taxis/blob/main/LICENSE) para obtener más información.
