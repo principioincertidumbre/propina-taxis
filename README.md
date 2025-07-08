@@ -4,7 +4,8 @@ Proyecto para la asignatura Desarrollo de Proyectos y Productos de Datos Magíst
 
 ## Objetivo
 
-El objetivo de este proyecto es la construcción de un modelo de machine learning, usando datos de viajes de los taxis amarillos de Nueva York para el año 2020, proporcionados por la [NYC Taxi and Limousine Commission (TLC)](https://www.nyc.gov/site/tlc/about/tlc-trip-record-data.page). El propósito del modelo de machine learning es encontrar aquellos viajes donde la propina dejada por el pasajero fue mayor al 20% del costo del viaje.
+El objetivo de este proyecto es la construcción de un modelo de machine learning, usando datos de viajes de los taxis amarillos de Nueva York para el año 2020, proporcionados por la [NYC Taxi and Limousine Commission (TLC)](https://www.nyc.gov/site/tlc/about/tlc-trip-record-data.page). <br>
+El propósito del modelo de machine learning es encontrar aquellos viajes donde la propina dejada por el pasajero fue mayor al 20% del costo del viaje. <br>
 Para ello ajustaremos un modelo de classificación binaria Random Forest usando los datos de los viajes de enero de 2020, comprobando si el rendimiento del modelo se mantiene constante entre enero y junio de 2020. La métrica utilizada para este propósito es F1-score.
 
 ## Instalación
