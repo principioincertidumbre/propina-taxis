@@ -4,41 +4,41 @@ Proyecto para la asignatura Desarrollo de Proyectos y Productos de Datos Magíst
 
 # Organización del Proyecto
 
-├── LICENSE
-├── README.md          <- Descripción del proyecto y cómo ejecutarlo.
-├── data/
-│   ├── raw/            <- Datos originales descargados.
-│   └── processed/      <- Datos transformados para entrenamientos y pruebas.
+├── LICENSE<br>
+├── README.md          <- Descripción del proyecto y cómo ejecutarlo.<br>
+├── data/<br>
+│   ├── raw/            <- Datos originales descargados.<br>
+│   └── processed/      <- Datos transformados para entrenamientos y pruebas.<br>
 │
-├── models/             <- Modelos entrenados y serializados.
+├── models/             <- Modelos entrenados y serializados.<br>
 │
-├── notebooks/          <- Notebooks para exploración y validación.
-│
-│
-├── reports/            <- Análisis relacionados con el proyecto.
-│   └── figures/        <- Gráficos y figuras para reportes.
+├── notebooks/          <- Notebooks para exploración y validación.<br>
 │
 │
-├── scripts/           <- Scripts de prueba del proyecto.
-│   ├── entrenamiento.py   
-|   ├── evaluacion.py     
-│   ├── evaluacion_mensual.py  
-│   ├── predicción.py                                                                     
+├── reports/            <- Análisis relacionados con el proyecto.<br>
+│   └── figures/        <- Gráficos y figuras para reportes.<br>
+│
+│
+├── scripts/           <- Scripts de prueba del proyecto.<br>
+│   ├── entrenamiento.py<br>   
+|   ├── evaluacion.py   <br>  
+│   ├── evaluacion_mensual.py<br>  
+│   ├── predicción.py<br>                                                                     
 │   │  
-├── src/                <- Código fuente del proyecto definido como módulos.
+├── src/                <- Código fuente del proyecto definido como módulos.<br>
 │   ├── __init__.py 
-|   ├── config.py      <- Parámetros y rutas de configuración.
+|   ├── config.py      <- Parámetros y rutas de configuración.<br>
 │   │
-│   ├── data/                                                                       
-│   │   └── dataset.py <- Descarga, carga y preprocesamiento de datos.
+│   ├── data/<br>                                                                       
+│   │   └── dataset.py <- Descarga, carga y preprocesamiento de datos.<br>
 │   │
-│   ├── features/       
-│   │   └── build_features.py <- Creación de variables a partir de los datos.
+│   ├── features/  <br>     
+│   │   └── build_features.py <- Creación de variables a partir de los datos.<br>
+│   |
+│   ├── modeling/<br>         
+│   │   ├── predict_model.py  <- Entrenamiento del modelo.<br>
+│   │   └── train_model.py    <- Predicción y evaluación.<br>
 │   │
-│   ├── modeling/         
-│   │   ├── predict_model.py  <- Entrenamiento del modelo.
-│   │   └── train_model.py    <- Predicción y evaluación.
-│   │
-│   └── visualization/
-│       └── plots.py   <- Visualización de resultados.
+│   └── visualization/<br>
+│       └── plots.py   <- Visualización de resultados.<br>
 ├── requirements.txt   <- Lista de dependencias necesarias.
