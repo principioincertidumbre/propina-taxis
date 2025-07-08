@@ -29,4 +29,5 @@ venv\Scripts\activate.bat
 ```
 pip install -r requirements.txt
 ```
-
+# Licencia
+Este proyecto está bajo la licencia MIT. Consulte el archivo [LICENSE](https://github.com/principioincertidumbre/propina-taxis/blob/main/LICENSE) para obtener más información.
