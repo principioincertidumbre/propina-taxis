@@ -139,10 +139,10 @@ print(f'F1 score junio 2020: {f1}')
 
 f1_mensual.append(f1)
 
-result_eval = plots.dataframe(meses,ejemplos_mensual, f1_mensual)
+result_eval = dataset.dataframe(meses,ejemplos_mensual, f1_mensual)
 
 print(result_eval)
 
-plots.lineplot(result_eval, meses, ejemplos_mensual, "Cantidad viajes taxis amarillos Nueva York enero-junio 2020")
+plots.lineplot(result_eval, meses, ejemplos_mensual, "Mes", "Cantidad viajes", "Cantidad viajes taxis amarillos Nueva York enero-junio 2020")
 
-plots.lineplot(result_eval, meses, f1_mensual, "F1-score enero-junio 2020")
+plots.lineplot(result_eval, meses, f1_mensual, "Mes", "F1-score", "F1-score enero-junio 2020")
