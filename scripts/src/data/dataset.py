@@ -37,3 +37,7 @@ def preprocess(df, target_col):
     return df.reset_index(drop=True)
 
 
+def dataframe(list1,list2,list3):
+    df = pd.DataFrame(list(zip(list1, list2, list3)),
+         columns =['Mes', 'Cantidad ejemplos', 'F1-score']) # crea dataframe que contiene los resultados de la evaulación del modelo
+    return df
