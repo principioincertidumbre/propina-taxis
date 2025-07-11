@@ -1,5 +1,6 @@
 import pandas as pd
 
+'''Funciones para leer parquet, preprocesar dataset y crear dataframe con resultados evaluación mensual'''
 def read_dataframe(url):
     df=pd.read_parquet(url)
     return df
@@ -7,13 +8,13 @@ def read_dataframe(url):
 
 def preprocess(df, target_col):
 
-    # Basic cleaning
-    df = df[df['fare_amount'] > 0].reset_index(drop=True)  # avoid divide-by-zero
-    # add target
+    # Limpieza básica
+    df = df[df['fare_amount'] > 0].reset_index(drop=True)  # Evita división por cero
+    # Agrega columna objetivo
     df['tip_fraction'] = df['tip_amount'] / df['fare_amount']
     df[target_col] = df['tip_fraction'] > 0.2
 
-    # add features
+    # Agrega atributos
     EPS = 1e-7
     df['pickup_weekday'] = df['tpep_pickup_datetime'].dt.weekday
     df['pickup_hour'] = df['tpep_pickup_datetime'].dt.hour
@@ -22,7 +23,7 @@ def preprocess(df, target_col):
     df['trip_time'] = (df['tpep_dropoff_datetime'] - df['tpep_pickup_datetime']).dt.seconds
     df['trip_speed'] = df['trip_distance'] / (df['trip_time'] + EPS)
 
-    # drop unused columns
+    # Elimina columnas que no serán usadas para el modelo drop
     numeric_feat = ["pickup_weekday","pickup_hour",'work_hours',"pickup_minute","passenger_count",'trip_distance','trip_time',
     'trip_speed']
     categorical_feat = ["PULocationID","DOLocationID","RatecodeID"]
@@ -31,7 +32,7 @@ def preprocess(df, target_col):
     df = df[cols_to_keep]
     df[features + [target_col]] = df[features + [target_col]].astype("float32").fillna(-1.0)
 
-    # convert target to int32 for efficiency (it's just 0s and 1s)
+    # Convierte columna objetivo a int32 por motivos de eficiencia (sólo contiene 0s and 1s)
     df[target_col] = df[target_col].astype("int32")
 
     return df.reset_index(drop=True)
