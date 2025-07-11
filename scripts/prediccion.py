@@ -14,4 +14,4 @@ y_pred = predict.model_predict(taxi_test, features)
 
 f1 = predict.model_evaluate(taxi_test,target_col, y_pred)
 
-print(f'F1 score: {f1}')
+print(f'F1 score febrero 2020: {f1}')
