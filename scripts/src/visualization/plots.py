@@ -1,6 +1,7 @@
 import matplotlib.pyplot as plt
 import seaborn as sns
 
+'''Función para crear gráficos de línea'''
 def lineplot(df,x,y,xlabel, ylabel, label):
     sns.lineplot(data=df, x=x, y=y)
     plt.xlabel(xlabel)
