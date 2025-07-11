@@ -2,8 +2,9 @@ from sklearn.ensemble import RandomForestClassifier
 from sklearn.metrics import f1_score
 import joblib
 
+'''Funciones para predicciones y evaluar modelo'''
 def model_predict(df, features):
-    loaded_rfc = joblib.load("models/random_forest.joblib")
+    loaded_rfc = joblib.load("models/random_forest.joblib") # Carga modelo entrenadp
     preds_test = loaded_rfc.predict_proba(df[features])
     preds_test_labels = [p[1] for p in preds_test.round()]
     return preds_test_labels
