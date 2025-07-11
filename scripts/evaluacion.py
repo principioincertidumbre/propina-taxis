@@ -8,10 +8,10 @@ features = build_features.build_features()
 
 target_col = "high_tip"
 
-taxi_train = dataset.preprocess(df=taxi_jan, target_col=target_col)
+taxi_jan = dataset.preprocess(df=taxi_jan, target_col=target_col)
 
-y_pred = predict.model_predict(taxi_train, features)
+y_pred = predict.model_predict(taxi_jan, features)
 
-f1 = predict.model_evaluate(taxi_train,target_col, y_pred)
+f1 = predict.model_evaluate(taxi_jan,target_col, y_pred)
 
-print(f'F1  score: {f1}')
+print(f'F1 score enero 2020: {f1}')
